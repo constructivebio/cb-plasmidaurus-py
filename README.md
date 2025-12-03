@@ -10,8 +10,8 @@ Generate your service credentials on your [user profile](https://www.plasmidsaur
 The scripts in this repo assume that these variables are exported to your environment variables. 
 
 ```
-export PLASMIDSAURUS_CLIENT_ID=[your client id]
-export PLASMIDSAURUS_CLIENT_SECRET=[your client secret]
+export PLASMIDSAURUS_CLIENT_ID=$(gcloud secrets versions access latest --secret=plasmidsaurus-client-id)
+export PLASMIDSAURUS_CLIENT_SECRET=$(gcloud secrets versions access latest --secret=plasmidsaurus-client-secret)
 
 python3 examples/plasmidsaurus-api-intro.py
 
